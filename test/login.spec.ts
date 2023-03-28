@@ -1,5 +1,5 @@
 // example.spec.ts
-// teste
+// teste de branch
 import { test, expect } from '@playwright/test';
 import { Classe } from '../pages/pageObject'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
 
