@@ -7,7 +7,7 @@ import { Classe } from '../pages/pageObject'; // importei a classe com nome "Cla
 
 test.describe('Login', () => {
 
-
+    
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
         await page.goto('https://www.saucedemo.com/');
