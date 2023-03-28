@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { Classe } from '../pages/pageObject';
+import { Classe } from '../pages/metodos';
 
 test.describe('Verificar carrinho', () => {
     
@@ -11,6 +11,9 @@ test.describe('Verificar carrinho', () => {
         await page.locator('[id=password]').fill('secret_sauce')
         await page.locator('//*[@type="submit"]').click()
     });
+    test.afterAll(async ({ page }) => {
+        await page.close()
+    });
 
     test('adicionar item no carrinho', async ({page}) => {
         const variavel = new Classe(page)
@@ -20,7 +23,7 @@ test.describe('Verificar carrinho', () => {
     test('acessar carrinho', async ({page}) => {
         const variavel = new Classe(page)
         await variavel.AcessaCarrinho()
-        await page.close()
+        
 
     })
 
@@ -29,7 +32,7 @@ test.describe('Verificar carrinho', () => {
         const varial = new Classe(page)
         await varial.AddProduto()
         await varial.RemoveItem()
-        await page.close()
+        
     })
 
 })

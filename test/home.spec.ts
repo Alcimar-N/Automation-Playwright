@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { Classe } from '../pages/pageObject';
+import { Classe } from '../pages/metodos';
 
 test.describe('Testes na home da página', () => {
 
@@ -10,7 +10,9 @@ test.describe('Testes na home da página', () => {
         await page.locator('[id=password]').fill('secret_sauce')
         await page.locator('//*[@type="submit"]').click()
     });
-
+    test.afterAll(async ({ page }) => {
+        await page.close()
+    });
     // "varialvel" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
 
     test('clicar no menu lateral', async ({ page }) => {
