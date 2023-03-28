@@ -1,8 +1,11 @@
 // aqui escrevo os métodos dentro da classe, que chamarei na pasta de teste "abc.spec.ts"
 import { expect, Locator, Page } from '@playwright/test';
+import { ElementosPage } from './elementos';
+
 
 export class Classe {
   readonly page: Page;
+  
   // readonly getStartedLink: Locator;
 
   constructor(page: Page) {
@@ -79,5 +82,9 @@ export class Classe {
     await this.page.waitForURL
     await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' })
     await this.page.close()
+  }
+
+  async LocTexto() {
+    
   }
 }
