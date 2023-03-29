@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test, chromium } from '@playwright/test';
 import { Classe } from '../pages/metodos'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
 
 // aqui escrevo os testes chamando os metodos criados na classe da pagina metodos
@@ -15,7 +15,7 @@ test.describe('Login', () => {
         // await page.locator('//*[@type="submit"]').click()
 
     });
-    test.afterAll(async ({ page }) => {
+    test.afterEach(async ({ page }) => {
         await page.close()
     });
 
@@ -36,4 +36,3 @@ test.describe('Login', () => {
         await umaClasse.Locbotao()
     })
 })
-
