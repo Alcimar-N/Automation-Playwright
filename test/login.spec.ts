@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { Classe } from '../pages/metodos'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
 
-// aqui escrevo os testes chamando os metodos criados na classe da pagina pageObjects
+// aqui escrevo os testes chamando os metodos criados na classe da pagina metodos
 
 test.describe('Login', () => {
     let umaClasse: Classe
