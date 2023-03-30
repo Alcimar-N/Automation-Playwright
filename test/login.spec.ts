@@ -10,10 +10,7 @@ test.describe('Login', () => {
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
         umaClasse = new Classe(page)
-        await page.goto('https://www.saucedemo.com/');
-        // await page.locator('[id=user-name]').fill('standard_user')
-        // await page.locator('[id=password]').fill('secret_sauce')
-        // await page.locator('//*[@type="submit"]').click()
+        await page.goto('https://www.saucedemo.com/')
 
     });
     test.afterEach(async ({ page }) => {
@@ -22,9 +19,9 @@ test.describe('Login', () => {
 
     test('Login válido', async ({ }) => { // < aqui não passo o "page" porque ela já está sendo chamda no beforEach
         // "umaClasse" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
-        await umaClasse.loginValido()
+        await umaClasse.loginValido('standard_user','secret_sauce')
     })
-    test('senha vazia', async () => {
+    test('senhasa vazia', async () => {
         await umaClasse.SenhaVazia()
     })
     test('e-mail vazio', async () => {

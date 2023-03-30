@@ -2,18 +2,14 @@
 import { expect, Page } from '@playwright/test';
 import { ElementosPage } from './elementos';
 
-
 export class Classe extends ElementosPage {
   readonly page: Page;
   readonly elementos: ElementosPage;
-  // readonly getStartedLink: Locator;
 
   constructor(page: Page) {
     super(page)
     this.page = page
     this.elementos = new ElementosPage(page)
-
-    // this.getStartedLink = page.locator('a', { hasText: 'Get started' });
 
   }
 
@@ -23,13 +19,13 @@ export class Classe extends ElementosPage {
   }
 
   async LocTexto() {
-    await this.elementos.texto.getByTitle('Swag Labs')
+    await this.elementos.text.getByTitle('Swag Labs')
     await this.page.waitForTimeout(2000)
   }
 
-  async loginValido() {
-    await this.page.locator('[id=user-name]').fill('standard_user')
-    await this.page.locator('[id=password]').fill('secret_sauce')
+  async loginValido(usuario: string, senha: string) {
+    await this.page.locator('[id=user-name]').fill(usuario)
+    await this.page.locator('[id=password]').fill(senha)
     await this.page.locator('//*[@type="submit"]').click()
 
 
@@ -88,6 +84,11 @@ export class Classe extends ElementosPage {
     await this.page.locator('//*[@class="footer"]//li[2]/a').click()
     await this.page.waitForURL
     await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' })
+  }
+
+  async Loctext() {
+    await this.elementos.text.textContent('Accepted usernames are:')
+    await this.text.screenshot({ path: 'screenshot.png' });
   }
 
 }

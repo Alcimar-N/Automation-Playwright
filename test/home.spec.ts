@@ -1,33 +1,27 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { Classe } from '../pages/metodos';
-//
-test.describe('Testes na home da página', () => {
 
+test.describe('Testes na home da página', () => {
+    let umaClasse: Classe
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
+        umaClasse = new Classe(page)
         await page.goto('https://www.saucedemo.com/');
-        await page.locator('[id=user-name]').fill('standard_user')
-        await page.locator('[id=password]').fill('secret_sauce')
-        await page.locator('//*[@type="submit"]').click()
+        await umaClasse.loginValido('standard_user','secret_sauce')
     });
-    test.afterAll(async ({ page }) => {
+    test.afterEach(async ({ page }) => {
         await page.close()
     });
-    // "varialvel" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
 
-    test('clicar no menu lateral', async ({ page }) => {
-        const variavel = new Classe(page)
-        await variavel.ClicaMenu()
+    // "umaClasse" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
+    test('clicar no menu lateral', async () => {
+        await umaClasse.ClicaMenu()
     })
-
-    test('verificar titulo da pagina', async ({ page }) => {
-        const variavel = new Classe(page)
-        await variavel.VerificaTitle()
+    test('verificar titulo da pagina', async () => {
+        await umaClasse.VerificaTitle()
     })
-
-    test('clicar na rede social', async ({ page }) => {
-        const variavel = new Classe(page)
-        await variavel.ClicaRede()
+    test('clicar na rede social', async () => {
+        await umaClasse.ClicaRede()
     })
-
+    
 })
