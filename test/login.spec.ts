@@ -1,4 +1,3 @@
-// example.spec.ts
 import { test, expect } from '@playwright/test';
 import { Classe } from '../pages/metodos'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
 
@@ -17,7 +16,7 @@ test.describe('Login', () => {
         await page.close()
     });
 
-    test('Login válido', async ({ }) => { // < aqui não passo o "page" porque ela já está sendo chamda no beforEach
+    test('Login válido', async ({ }) => { // < aqui não passo o "page" porque ela já está sendo chamado no beforEach
         // "umaClasse" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
         await umaClasse.loginValido('standard_user','secret_sauce')
     })

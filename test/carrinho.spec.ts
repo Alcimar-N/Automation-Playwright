@@ -2,16 +2,16 @@ import { test, expect } from '@playwright/test';
 import { Classe } from '../pages/metodos';
 
 test.describe('Verificar carrinho', () => {
-    
+    let umaClasse: Classe
+
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
-        //let rebeceClasse = new Classe(page)
+        umaClasse = new Classe(page)
         await page.goto('https://www.saucedemo.com/');
-        await page.locator('[id=user-name]').fill('standard_user')
-        await page.locator('[id=password]').fill('secret_sauce')
-        await page.locator('//*[@type="submit"]').click()
+        await umaClasse.loginValido('standard_user','secret_sauce')
     });
-    test.afterAll(async ({ page }) => {
+    test.afterEach(async ({ page }) => {
+        //roda depois de cada teste
         await page.close()
     });
 

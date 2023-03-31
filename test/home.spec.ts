@@ -3,6 +3,7 @@ import { Classe } from '../pages/metodos';
 
 test.describe('Testes na home da página', () => {
     let umaClasse: Classe
+    
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
         umaClasse = new Classe(page)
@@ -10,6 +11,7 @@ test.describe('Testes na home da página', () => {
         await umaClasse.loginValido('standard_user','secret_sauce')
     });
     test.afterEach(async ({ page }) => {
+        //roda depois de cada teste
         await page.close()
     });
 

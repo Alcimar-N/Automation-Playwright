@@ -11,19 +11,20 @@ test.describe('Página inicial', () => {
 
     });
     test.afterEach(async ({ page }) => {
+        //roda depois de cada teste
         await page.close()
     });
 
-    test('verifica texto', async() => {
+    test('verifica algum texto', async() => {
         await umaClasse.Loctext()
     })
-    test('', async () => {
-
+    test('verifica botão Login', async () => {
+        await umaClasse.VerificaBtnLogin()
     })
-    test('', async () => {
-        
+    test('verifica username', async () => {
+        await umaClasse.VerificarUserName
     })
-    test('', async () => {
-        
+    test('verifica password', async () => {
+        await umaClasse.verificaPassword()
     })
 })

@@ -83,12 +83,23 @@ export class Classe extends ElementosPage {
   async ClicaRede() {
     await this.page.locator('//*[@class="footer"]//li[2]/a').click()
     await this.page.waitForURL
-    await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' })
+    await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' }).s
   }
 
   async Loctext() {
-    await this.elementos.text.textContent('Accepted usernames are:')
+    await expect(this.elementos.text).toHaveText('Accepted usernames are:')
     await this.text.screenshot({ path: 'screenshot.png' });
   }
 
+  async VerificaBtnLogin() {
+    await expect(this.elementos.botao).toHaveValue('Login')
+  }
+
+  async VerificarUserName(){
+    await expect(this.elementos.username).toHaveId('user-name')
+  }
+
+  async verificaPassword (){
+    await expect(this.elementos.password).toHaveId('password')
+  }
 }
