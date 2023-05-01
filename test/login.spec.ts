@@ -32,4 +32,7 @@ test.describe('Login', () => {
     test('clica botão', async () => {
         await umaClasse.Locbotao()
     })
+    test('', async () => {
+        
+    })
 })

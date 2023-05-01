@@ -1,12 +1,15 @@
 import { test } from '@playwright/test';
 import { Classe } from '../pages/metodos';
+import { homePage } from '../pages/homePage';
 
 test.describe('Testes na home da página', () => {
     let umaClasse: Classe
-    
+    let home: homePage
+
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
         umaClasse = new Classe(page)
+        home = new homePage(page)
         await page.goto('https://www.saucedemo.com/');
         await umaClasse.loginValido('standard_user','secret_sauce')
     });
@@ -25,5 +28,10 @@ test.describe('Testes na home da página', () => {
     test('clicar na rede social', async () => {
         await umaClasse.ClicaRede()
     })
-    
+    test('clicar icone linkedin', async () => {
+        await umaClasse.IrParaPagina()
+    })
+   test('teste', async () => {
+    await home.testeClass()
+   })
 })

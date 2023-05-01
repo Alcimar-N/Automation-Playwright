@@ -1,16 +1,19 @@
 // aqui escrevo os métodos dentro da classe, que chamarei na pasta de teste "abc.spec.ts"
 import { expect, Page } from '@playwright/test';
 import { ElementosPage } from './elementos';
+import {homePage} from './homePage'
 
 export class Classe extends ElementosPage {
   readonly page: Page;
   readonly elementos: ElementosPage;
+  readonly homePage: homePage;
 
   constructor(page: Page) {
     super(page)
     this.page = page
     this.elementos = new ElementosPage(page)
-
+    this.homePage = new homePage(page)
+    
   }
 
   async Locbotao() {
@@ -31,7 +34,7 @@ export class Classe extends ElementosPage {
 
   }
   async IrParaPagina() {
-    await this.page.waitForTimeout(2000)
+    await this.homePage.testeClass()
     await this.page.screenshot()
 
   }
@@ -83,7 +86,7 @@ export class Classe extends ElementosPage {
   async ClicaRede() {
     await this.page.locator('//*[@class="footer"]//li[2]/a').click()
     await this.page.waitForURL
-    await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' }).s
+    await this.page.locator('//*[@class="footer"]//li[2]/a').screenshot({ path: 'screenshot.png' })
   }
 
   async Loctext() {
