@@ -12,8 +12,11 @@ export class homePage extends ElementosPage {
     }
 
 
-    async testeClass(){
-        await this.in.click()
+    async filtroPagina(){
+        await this.filtro.click()
         await this.page.waitForTimeout(5000)
+        await this.page.keyboard.press('ArrowDown')
+        await this.page.waitForTimeout(5000)
+
     }
 }

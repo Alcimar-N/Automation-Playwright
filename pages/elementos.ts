@@ -8,6 +8,8 @@ export class ElementosPage {
     readonly username: Locator;
     readonly password: Locator;
     readonly in: Locator;
+    readonly filtro: Locator;
+
     constructor(page: Page) {
         this.page = page;
         this.texto = page.locator('//*[@id="root"]/div/div[1]');
@@ -16,7 +18,7 @@ export class ElementosPage {
         this.username = page.locator('#user-name')
         this.password = page.locator('[placeholder="Password"]')
         this.in = page.locator('.footer > ul > li:nth-child(3)')
-        
+        this.filtro = page.locator('[data-test="product_sort_container"]')
     }
 
 }

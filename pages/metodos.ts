@@ -33,11 +33,6 @@ export class Classe extends ElementosPage {
 
 
   }
-  async IrParaPagina() {
-    await this.homePage.testeClass()
-    await this.page.screenshot()
-
-  }
 
   async AddProduto() {
     await this.page.locator('[id=add-to-cart-sauce-labs-backpack]').click()
