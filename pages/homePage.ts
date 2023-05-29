@@ -14,9 +14,11 @@ export class homePage extends ElementosPage {
 
     async filtroPagina(){
         await this.filtro.click()
-        await this.page.waitForTimeout(5000)
+        await this.page.waitForTimeout(3000)
         await this.page.keyboard.press('ArrowDown')
-        await this.page.waitForTimeout(5000)
+        await this.page.keyboard.press('ArrowDown')
+        await this.page.keyboard.press('Enter')
+        await this.page.waitForTimeout(3000)
 
     }
 }
