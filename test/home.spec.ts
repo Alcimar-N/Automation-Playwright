@@ -33,4 +33,5 @@ test.describe('Testes na home da página', () => {
         await homesPage.filtroPagina()
         
     })
-}
+
+})
