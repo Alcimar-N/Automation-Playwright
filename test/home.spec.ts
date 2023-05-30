@@ -28,6 +28,7 @@ test.describe('Testes na home da página', () => {
     test('clicar na rede social', async () => {
         await umaClasse.ClicaRede()
     })
+    // teste no novo repositorio
     
     test('clica no filtro', async () => {
         await homesPage.filtroPagina()
