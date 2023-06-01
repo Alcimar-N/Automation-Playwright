@@ -21,4 +21,8 @@ export class homePage extends ElementosPage {
         await this.page.waitForTimeout(3000)
 
     }
+
+    async (){
+        
+    }
 }
