@@ -9,7 +9,7 @@ export default defineConfig({
     //screenshot: 'only-on-failure',
     
   },
-  reporter: [['html', { open: 'on-failure' }]],
+  //reporter: [['html', { open: 'on-failure' }]],
   projects: [
     {
       name: 'chromium',

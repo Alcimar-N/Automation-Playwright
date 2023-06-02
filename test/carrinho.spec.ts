@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { Classe } from '../pages/metodos';
 import { carrinhoClasse } from '../pages/carrinhoPage';
-test.describe('Verificar carrinho', () => {
+
+test.describe('Funcionalidade carrinho', () => {
     let umaClasse: Classe
     let carrinhoClas: carrinhoClasse
 
@@ -17,26 +18,21 @@ test.describe('Verificar carrinho', () => {
         await page.close()
     });
 
-    test('adicionar item no carrinho', async ({page}) => {
-        const variavel = umaClasse
-        await variavel.AddProduto()
+    test('adicionar item no carrinho', async () => {
+        await carrinhoClas.AddProduto()
     })
 
-    test('acessar carrinho', async ({page}) => {
-        const variavel = new Classe(page)
-        await variavel.AcessaCarrinho()
-
-    })
-
-    test('remover item do carrinho', async ({page}) => {
-        const varial = new Classe(page)
-        await varial.AddProduto()
-        await varial.RemoveItem()
-        
-    })
-
-    test('carrinho teste', async({page}) => {
+    test('acessar carrinho', async ({}) => {
         await carrinhoClas.AcessaCarrinho()
+    })
+
+    test('remover item do carrinho', async ({}) => {
+        await carrinhoClas.AddProduto()
+        await carrinhoClas.RemoveItem()  
+    })
+
+    test('finaliza compra', async({}) => {
+        await carrinhoClas.FinalizaCompra()
     })
 
 })
