@@ -15,21 +15,21 @@ export class carrinhoClasse {
     const element1 = await this.page.locator('#add-to-cart-sauce-labs-backpack')
     const element2 = await this.page.waitForSelector('[data-test="add-to-cart-sauce-labs-bike-light"]')
     const element3 = await this.page.waitForSelector('#add-to-cart-sauce-labs-bolt-t-shirt')
-   
+
     await Promise.all([ // promisse.all() aguarda que várias açoes sejam concluida para seguir
       element1.click(),
       element2.click(),
       element3.click()
-      
+
     ])
     await this.AcessaCarrinho()
-  
+
   }
 
   async AcessaCarrinho() {
     await this.page.waitForTimeout(2000)
     await this.page.locator('[id^="shopping"]').click()
-    
+
 
   }
 
@@ -42,10 +42,10 @@ export class carrinhoClasse {
   async FinalizaCompra() {
     await this.AddProduto()
     await this.AcessaCarrinho()
-    
+
   }
 
-  async Checkout(){
+  async Checkout() {
     await this.page.locator('#checkout').click()
     await this.page.locator('[placeholder="First Name"]').fill('Teste')
     await this.page.locator('[placeholder="Last Name"]').fill('Testando')
