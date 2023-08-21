@@ -33,6 +33,7 @@ test.describe('Funcionalidade carrinho', () => {
 
     test('finaliza compra', async({}) => {
         await carrinhoClas.FinalizaCompra()
+        await carrinhoClas.Checkout()
     })
 
 })
