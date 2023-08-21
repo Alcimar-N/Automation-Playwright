@@ -42,6 +42,10 @@ export class carrinhoClasse {
   async FinalizaCompra() {
     await this.AddProduto()
     await this.AcessaCarrinho()
+    
+  }
+
+  async Checkout(){
     await this.page.locator('#checkout').click()
     await this.page.locator('[placeholder="First Name"]').fill('Teste')
     await this.page.locator('[placeholder="Last Name"]').fill('Testando')
@@ -49,10 +53,6 @@ export class carrinhoClasse {
     await this.page.locator('#continue').click()
     await this.page.locator('#finish').click()
     await this.page.waitForTimeout(3000)
-  }
-
-  async Checkout(){
-    
   }
 
 }

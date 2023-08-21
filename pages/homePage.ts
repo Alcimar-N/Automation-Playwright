@@ -19,7 +19,7 @@ export class homePage extends ElementosPage {
         await this.page.keyboard.press('ArrowDown')
         await this.page.keyboard.press('Enter')
         await this.page.waitForTimeout(3000)
-
+        
     }
 
     async (){
