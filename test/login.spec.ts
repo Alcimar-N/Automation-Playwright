@@ -20,22 +20,6 @@ test.describe('Login', () => {
         await page.close()
     });
 
-    // test('Login válido', async ({ }) => { // < aqui não passo o "page" porque ela já está sendo chamado no beforEach
-    //     // "umaClasse" recebe a classe com os métodos dentro, em seguida chamo os metodos criados na classe
-    //     await umaClasse.loginValido('standard_user','secret_sauce')
-    // })
-    // test('senha vazia', async () => {
-    //     await umaClasse.SenhaVazia()
-    // })
-    // test('e-mail vazio', async () => {
-    //     await umaClasse.Nomevazio()
-    // })
-    // test('verifica titulo', async () => {
-    //     await umaClasse.LocTexto()
-    // })
-    // test('clica botão', async () => {
-    //     await umaClasse.Locbotao()
-    // })
     test('home teste botão login', async() => {
         await login.VerificaBtnLogin()
     })
