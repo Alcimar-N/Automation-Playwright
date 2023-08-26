@@ -19,9 +19,8 @@ test.describe('Login', () => {
     test.afterEach(async ({ page }) => {
         await page.close()
     });
-
-    test('logar no sistema', async() => {
-        await loginPage.Login()
         
+    test('home teste botão login', async() => {
+        await login.VerificaBtnLogin()
     })
 })
