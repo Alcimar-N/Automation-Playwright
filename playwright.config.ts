@@ -2,14 +2,14 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
 
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     video: 'off',
     //screenshot: 'only-on-failure',
     
   },
-  //reporter: [['html', { open: 'on-failure' }]],
+  reporter: [['html', { open: 'on-failure' }]],
   projects: [
     {
       name: 'chromium',
@@ -37,20 +37,20 @@ export default defineConfig({
   //   },
 
   //   /* Test against branded browsers. */
-    {
+   /*  {
       name: 'Microsoft Edge',
       use: { 
         ...devices['Desktop Edge'], 
         channel: 'msedge' 
       },
     },
-  //   {
-  //     name: 'Google Chrome',
-  //     use: { 
-  //       ...devices['Desktop Chrome'], 
-  //       channel: 'chrome' 
-  //     },
-  //   },
-    ],
+    {
+      name: 'Google Chrome',
+      use: { 
+        ...devices['Desktop Chrome'], 
+        channel: 'chrome' 
+      },
+    }, */
+    ]
    
 });

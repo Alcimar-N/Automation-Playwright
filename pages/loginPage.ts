@@ -1,24 +1,23 @@
 import { Page, expect } from "@playwright/test";
 import { ElementosPage } from "./elementos";
-//import { homePage } from "./homePage";
-//import { Classe } from "./metodos";
 
-export class loginPage {
+
+export class LoginPage {
     readonly page:Page
-
     readonly elementos : ElementosPage
-    //readonly clas : Classe
+    
 
     constructor(page:Page){
       this.page = page
       this.elementos = new ElementosPage(page)
     }
 
-    async VerificaBtnLogin() {
-       await expect(this.elementos.botao).toHaveValue('Login')
+    async Login() {
+       await this.elementos.userName.fill('standard_user')
+       await this.elementos.passWord.fill('secret_sauce')
+       await this.elementos.loginBotao.click()
+       await expect(this.page).toHaveURL('https://www.saucedemo.com/inventory.html')
     }
 
-    async teste(){
-
-    }
+    
 }

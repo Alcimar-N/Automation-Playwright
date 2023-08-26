@@ -2,23 +2,17 @@ import { Page, Locator} from "@playwright/test";
 
 export class ElementosPage {
     readonly page: Page;
-    readonly texto: Locator;
-    readonly botao: Locator;
-    readonly text: Locator;
-    readonly username: Locator;
-    readonly password: Locator;
-    readonly in: Locator;
-    readonly filtro: Locator;
+    readonly userName: Locator;
+    readonly passWord: Locator;
+    readonly loginBotao: Locator;
+   
 
     constructor(page: Page) {
         this.page = page;
-        this.texto = page.locator('//*[@id="root"]/div/div[1]');
-        this.botao = page.locator('#login-button')
-        this.text = page.locator('#login_credentials > h4')
-        this.username = page.locator('#user-name')
-        this.password = page.locator('[placeholder="Password"]')
-        this.in = page.locator('.footer > ul > li:nth-child(3)')
-        this.filtro = page.locator('.select_container')
+        this.userName = page.locator('#user-name');
+        this.passWord = page.locator('#password');
+        this.loginBotao= page.locator('[data-test="login-button"]');
+        
     }
 
 }
