@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import { ElementosPage } from "./elementos";
+import { ElementosPage } from "../../pages/ElementsPage";
 
 
 export class LoginPage {
