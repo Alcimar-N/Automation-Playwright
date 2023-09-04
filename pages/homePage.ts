@@ -1,28 +1,23 @@
 import {Page} from "@playwright/test"
-import { ElementosPage } from "./elementos"
+import { ElementsHomePage } from "../elementsPage/elementosHomepage" 
 
-export class homePage extends ElementosPage {
+export class homePage {
     readonly page:Page
-    readonly elements: ElementosPage
+    readonly elements: ElementsHomePage
 
     constructor(page:Page){
-        super(page)
+        
         this.page = page
-        this.elements = new ElementosPage(page)
+        this.elements = new ElementsHomePage(page)
     }
 
 
     async filtroPagina(){
-        await this.filtro.click()
-        await this.page.waitForTimeout(3000)
-        await this.page.keyboard.press('ArrowDown')
-        await this.page.keyboard.press('ArrowDown')
-        await this.page.keyboard.press('Enter')
-        await this.page.waitForTimeout(3000)
+
         
     }
 
-    async (){
+    async () {
         
     }
 }
