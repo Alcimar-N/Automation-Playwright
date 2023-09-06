@@ -1,5 +1,5 @@
-import {Page, expect} from "@playwright/test"
-import { ElementsHomePage } from "../elementsPage/elementosHomepage" 
+/* import {Page, expect} from "@playwright/test"
+//import { ElementsHomePage } from "..elementosHomepage" 
 
 export class HomePage {
     readonly page:Page
@@ -17,4 +17,4 @@ export class HomePage {
     }
 
   
-}
+} */

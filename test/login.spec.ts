@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 //import { Classe } from '../pages/metodos'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
-import { homePage } from '../pages/homePage';
-import { LoginPage } from '../pages/loginPage';
+import { homePage } from '../pages/MethodsPage';
+import { LoginPage } from '../pages/MethodsPage';
 // aqui escrevo os testes chamando os metodos criados na classe da pagina metodos
 
 test.describe('Login', () => {
@@ -20,19 +20,7 @@ test.describe('Login', () => {
         await page.close()
     });
         
-    test('teste botão login', async() => {
-        await loginPage.Login()
-    })
-    test('valida mensagem de login vazio', async() => {
-        await loginPage.usuarioVazio()
-    })
-    test('valida mensagem de senha vazia', async() => {
-        await loginPage.senhaVazia()
-    })
-    test('usuario e senha errado', async() => {
-        await loginPage.credenciaisInvalidas()
-    })
-    test.only('valida titulo na pagina de login', async() => {
-        await loginPage.textoPaginaDeLogin()
+    test('home teste botão login', async() => {
+        await login.VerificaBtnLogin()
     })
 })
