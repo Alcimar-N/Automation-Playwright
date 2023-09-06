@@ -1,23 +1,20 @@
-import {Page} from "@playwright/test"
+import {Page, expect} from "@playwright/test"
 import { ElementsHomePage } from "../elementsPage/elementosHomepage" 
 
-export class homePage {
+export class HomePage {
     readonly page:Page
-    readonly elements: ElementsHomePage
+    readonly elementsHome: ElementsHomePage
 
     constructor(page:Page){
-        
         this.page = page
-        this.elements = new ElementsHomePage(page)
+        this.elementsHome = new ElementsHomePage(page)
     }
 
 
-    async filtroPagina(){
+    async verificaTituloProduto(){
+        await expect(this.elementsHome.tituloPaginaProdutos).toHaveText('Products')
 
-        
     }
 
-    async () {
-        
-    }
+  
 }

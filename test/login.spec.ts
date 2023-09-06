@@ -20,7 +20,7 @@ test.describe('Login', () => {
         await page.close()
     });
         
-    test('home teste botão login', async() => {
+    test('teste botão login', async() => {
         await loginPage.Login()
     })
     test('valida mensagem de login vazio', async() => {

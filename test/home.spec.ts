@@ -1,15 +1,20 @@
 import { test } from '@playwright/test';
-import { homePage } from '../pages/homePage';
+import { HomePage } from '../pages/homePage';
+import{ LoginPage } from '../pages/loginPage'
 
 test.describe('Testes na home da página', () => {
   
-    let homesPage: homePage
+    let homesPage: HomePage
+    let loginPage: LoginPage
 
     test.beforeEach(async ({ page }) => {
         // Roda antes da cada teste
        
-        homesPage = new homePage(page)
+        homesPage = new HomePage(page)
+        loginPage = new LoginPage(page)
         await page.goto('https://www.saucedemo.com/');
+        await loginPage.Login()
+
         
     });
     test.afterEach(async ({ page }) => {
@@ -17,8 +22,8 @@ test.describe('Testes na home da página', () => {
         await page.close()
     });
     
-    test('', async() => {
-
+    test('valida titulo da pagina produto', async() => {
+        await homesPage.verificaTituloProduto()
     })
 
 })

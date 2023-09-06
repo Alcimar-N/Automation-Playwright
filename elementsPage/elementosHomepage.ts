@@ -2,14 +2,14 @@ import { Page, Locator} from "@playwright/test";
 
 export class ElementsHomePage {
     readonly page: Page;
-    readonly userName: Locator;
+    readonly tituloPaginaProdutos: Locator;
     
    
 
     constructor(page: Page) {
         this.page = page;
-        this.userName = page.locator('#user-name');
-        ;
+        this.tituloPaginaProdutos = page.locator('[class^="header"] > span')
+        
         
     }
 
