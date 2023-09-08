@@ -21,6 +21,26 @@ test.describe('Login', () => {
     });
         
     test('home teste botão login', async() => {
+<<<<<<< HEAD
         await login.VerificaBtnLogin()
+=======
+<<<<<<< Updated upstream
+        await loginPage.Login()
+    })
+    test('valida mensagem de login vazio', async() => {
+        await loginPage.usuarioVazio()
+    })
+    test('valida mensagem de senha vazia', async() => {
+        await loginPage.senhaVazia()
+    })
+    test('usuario e senha errado', async() => {
+        await loginPage.credenciaisInvalidas()
+    })
+    test.only('valida titulo na pagina de login', async() => {
+        await loginPage.textoPaginaDeLogin()
+=======
+        await login.VerificaBtnLogin()
+>>>>>>> Stashed changes
+>>>>>>> segundaBranch
     })
 })
