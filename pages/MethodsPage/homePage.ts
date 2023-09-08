@@ -1,5 +1,7 @@
-import {Page} from "@playwright/test"
-import { ElementsHomePage } from "../elementsPage/elementosHomepage" 
+import {Page, expect} from "@playwright/test"
+//import { ElementsHomePage } from "..elementosHomepage" 
+import { ElementsHomePage } from "../../elementsPage/elementosHomepage" 
+
 
 export class homePage {
     readonly page:Page
@@ -12,8 +14,8 @@ export class homePage {
     }
 
 
-    async filtroPagina(){
-
+    async tituloPaginaProdutos(){
+        await expect(this.elements.tituloProdutos).toHaveText('Products')
         
     }
 

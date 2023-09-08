@@ -1,19 +1,15 @@
 import { Page, expect } from "@playwright/test";
-<<<<<<< HEAD:pages/MethodsPage/loginPage.ts
-import { ElementosPage } from "../../pages/ElementsPage";
-=======
-import { ElementsPage } from "../elementsPage/elementosLoginPage";
->>>>>>> 5cf08b2b1abe02a366ce125840b42feee6432717:pages/loginPage.ts
+import { ElementsLoginPage } from "../../elementsPage/elementosLoginPage"; 
 
 
 export class LoginPage {
     readonly page:Page
-    readonly elementosPageLogin : ElementsPage
+    readonly elementosPageLogin : ElementsLoginPage
     
 
     constructor(page:Page){
       this.page = page
-      this.elementosPageLogin = new ElementsPage(page)
+      this.elementosPageLogin = new ElementsLoginPage(page)
     }
 
     async Login() {

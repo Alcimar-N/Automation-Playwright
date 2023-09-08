@@ -1,22 +1,16 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
 import { Page, Locator} from "@playwright/test";
 
 export class ElementsHomePage {
     readonly page: Page;
-    readonly userName: Locator;
+    readonly tituloProdutos: Locator;
     
    
 
     constructor(page: Page) {
         this.page = page;
-        this.userName = page.locator('#user-name');
-        ;
+        this.tituloProdutos = page.locator('.header_secondary_container > span')
         
     }
 
 }
-=======
->>>>>>> Stashed changes
->>>>>>> segundaBranch
+
