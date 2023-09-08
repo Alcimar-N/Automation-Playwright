@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 //import { Classe } from '../pages/metodos'; // importei a classe com nome "Classe" criada na pasta "pageObjects"
-import { homePage } from '../pages/homePage';
-import { LoginPage } from '../pages/loginPage';
+import { homePage } from '../pages/MethodsPage';
+import { LoginPage } from '../pages/MethodsPage';
 // aqui escrevo os testes chamando os metodos criados na classe da pagina metodos
 
 test.describe('Login', () => {
@@ -20,7 +20,11 @@ test.describe('Login', () => {
         await page.close()
     });
         
-    test('teste botão login', async() => {
+    test('home teste botão login', async() => {
+<<<<<<< HEAD
+        await login.VerificaBtnLogin()
+=======
+<<<<<<< Updated upstream
         await loginPage.Login()
     })
     test('valida mensagem de login vazio', async() => {
@@ -34,5 +38,9 @@ test.describe('Login', () => {
     })
     test.only('valida titulo na pagina de login', async() => {
         await loginPage.textoPaginaDeLogin()
+=======
+        await login.VerificaBtnLogin()
+>>>>>>> Stashed changes
+>>>>>>> segundaBranch
     })
 })

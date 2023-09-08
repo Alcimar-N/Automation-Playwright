@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
 import { Page, Locator} from "@playwright/test";
 
+<<<<<<<< HEAD:pages/ElementsPage/elementosPageLogin.ts
+export class ElementosPageLogin {
+========
 export class ElementsHomePage {
+>>>>>>>> 5cf08b2b1abe02a366ce125840b42feee6432717:elementsPage/elementosHomepage.ts
     readonly page: Page;
     readonly userName: Locator;
     
@@ -17,6 +18,3 @@ export class ElementsHomePage {
     }
 
 }
-=======
->>>>>>> Stashed changes
->>>>>>> segundaBranch

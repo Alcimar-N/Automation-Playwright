@@ -1,20 +1,42 @@
-import {Page, expect} from "@playwright/test"
+<<<<<<< HEAD
+/* import {Page, expect} from "@playwright/test"
+//import { ElementsHomePage } from "..elementosHomepage" 
+=======
+<<<<<<< Updated upstream
+import {Page} from "@playwright/test"
 import { ElementsHomePage } from "../elementsPage/elementosHomepage" 
+=======
+/* import {Page, expect} from "@playwright/test"
+//import { ElementsHomePage } from "..elementosHomepage" 
+>>>>>>> Stashed changes
+>>>>>>> segundaBranch
 
-export class HomePage {
+export class homePage {
     readonly page:Page
-    readonly elementsHome: ElementsHomePage
+    readonly elements: ElementsHomePage
 
     constructor(page:Page){
+        
         this.page = page
-        this.elementsHome = new ElementsHomePage(page)
+        this.elements = new ElementsHomePage(page)
     }
 
 
-    async verificaTituloProduto(){
-        await expect(this.elementsHome.tituloPaginaProdutos).toHaveText('Products')
+    async filtroPagina(){
 
+        
     }
 
-  
+<<<<<<< Updated upstream
+    async () {
+        
+    }
 }
+=======
+  
+<<<<<<< HEAD
+} */
+=======
+} */
+>>>>>>> Stashed changes
+>>>>>>> segundaBranch
