@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+/* import { Page } from "@playwright/test";
 //import { ElementosPage } from "./elementos";
 
 export class carrinhoClasse {
@@ -55,4 +55,4 @@ export class carrinhoClasse {
     await this.page.waitForTimeout(3000)
   }
 
-}
+} */

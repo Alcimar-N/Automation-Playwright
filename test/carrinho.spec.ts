@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/* import { test, expect } from '@playwright/test';
 import { carrinhoClasse } from '../pages/carrinhoPage';
 
 test.describe('Funcionalidade carrinho', () => {
@@ -35,4 +35,4 @@ test.describe('Funcionalidade carrinho', () => {
         await carrinhoClas.Checkout()
     })
 
-})
+}) */

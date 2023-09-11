@@ -5,21 +5,22 @@ import { ElementsHomePage } from "../../elementsPage/elementosHomepage"
 
 export class homePage {
     readonly page:Page
-    readonly elements: ElementsHomePage
+    readonly elementsHome: ElementsHomePage
 
     constructor(page:Page){
         
         this.page = page
-        this.elements = new ElementsHomePage(page)
+        this.elementsHome = new ElementsHomePage(page)
     }
 
 
     async tituloPaginaProdutos(){
-        await expect(this.elements.tituloProdutos).toHaveText('Products')
+        await expect(this.elementsHome.tituloProdutos).toHaveText('Products')
         
     }
 
-    async () {
+    async ListaProdutosPagina(){
+       await expect(this.elementsHome.listaProdutos).toHaveCount(6)
         
     }
 }
