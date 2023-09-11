@@ -19,12 +19,12 @@ test.describe('Testes na home da página', () => {
         await page.close()
     });
 
-    test.only('valida titulo da página produto', async () => {
+    test('valida titulo da página produto', async () => {
         await homesPage.tituloPaginaProdutos()
     })
 
-    test('valida itens na sidebar', async() => {
-
+    test.only('valida lista de produtos na pagina', async() => {
+        await homesPage.ListaProdutosPagina()
     })
 
 })
