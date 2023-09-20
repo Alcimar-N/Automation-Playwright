@@ -23,8 +23,12 @@ test.describe('Testes na home da página', () => {
         await homesPage.tituloPaginaProdutos()
     })
 
-    test.only('valida lista de produtos na pagina', async() => {
+    test('valida a quantidade de produtos na pagina', async() => {
         await homesPage.ListaProdutosPagina()
+    })
+
+    test('valida nomes das redes sociais', async () => {
+        await homesPage.redesSociais()
     })
 
 })
