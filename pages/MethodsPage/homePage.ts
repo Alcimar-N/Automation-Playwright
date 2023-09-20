@@ -23,4 +23,10 @@ export class homePage {
        await expect(this.elementsHome.listaProdutos).toHaveCount(6)
         
     }
+
+    async redesSociais(){
+        await expect(this.elementsHome.redesSocialTwiter).toHaveText('Twitter')
+        await expect(this.elementsHome.redesSocialFacebook).toHaveText('Facebook')
+        await expect(this.elementsHome.redesSocialLinkendin).toHaveText('LinkedIn')
+     }
 }
