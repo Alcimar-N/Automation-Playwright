@@ -7,6 +7,8 @@ export class ElementsHomePage {
     readonly redesSocialTwiter: Locator;
     readonly redesSocialFacebook: Locator;
     readonly redesSocialLinkendin: Locator;
+    readonly menuBurger: Locator;
+    readonly listaMenuBurger: Locator;
    
 
     constructor(page: Page) {
@@ -16,6 +18,8 @@ export class ElementsHomePage {
         this.redesSocialTwiter = page.locator('ul[class="social"] li:nth-child(1)')
         this.redesSocialFacebook = page.locator('ul[class="social"] li:nth-child(2)')
         this.redesSocialLinkendin = page.locator('ul[class="social"] li:nth-child(3)')
+        this.menuBurger = page.locator('#react-burger-menu-btn')
+        this.listaMenuBurger = page.locator('[class="bm-item-list"] > a')
         
     }
 
