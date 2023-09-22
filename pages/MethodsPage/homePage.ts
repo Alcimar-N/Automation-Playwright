@@ -29,4 +29,9 @@ export class homePage {
         await expect(this.elementsHome.redesSocialFacebook).toHaveText('Facebook')
         await expect(this.elementsHome.redesSocialLinkendin).toHaveText('LinkedIn')
      }
+
+    async acessaMenu(){
+        await this.elementsHome.menuBurger.click()
+        await expect(this.elementsHome.listaMenuBurger).toHaveCount(4)
+    }
 }
