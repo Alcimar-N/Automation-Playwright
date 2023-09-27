@@ -31,7 +31,11 @@ test.describe('Testes na home da página', () => {
         await homesPage.redesSociais()
     })
 
-    test.only('valida quantidade de itens no menu lateral', async () => {
+    test('valida quantidade de itens no menu lateral', async () => {
         await homesPage.acessaMenu()
+    })
+
+    test.only('filtra produtos na home', async () => {
+        await homesPage.filtraProdutos()
     })
 })
