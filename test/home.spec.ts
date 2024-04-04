@@ -35,7 +35,9 @@ test.describe('Testes na home da página', () => {
         await homesPage.acessaMenu()
     })
 
-    test.only('filtra produtos na home', async () => {
+    test('filtra produtos na home', async () => {
         await homesPage.filtraProdutos()
     })
+
+    
 })

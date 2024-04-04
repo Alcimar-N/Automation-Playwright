@@ -2,14 +2,14 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
 
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     ignoreHTTPSErrors: true,
     video: 'off',
-    //screenshot: 'only-on-failure',
+   // screenshot: 'only-on-failure',
     
   },
-  reporter: [['html', { open: 'on-failure' }]],
+  reporter: [['html', { open: 'always' }]],
   projects: [
     {
       name: 'chromium',
