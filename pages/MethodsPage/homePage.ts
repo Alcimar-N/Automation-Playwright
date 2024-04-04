@@ -39,7 +39,12 @@ export class homePage {
         await this.elementsHome.filtroProdutos.click()
         await this.page.keyboard.press('ArrowDown')
         await this.page.keyboard.down('ArrowDown')
+        await this.page.waitForTimeout(3000)
         await this.page.keyboard.press('Enter')
+        expect(this.page.locator('.product_sort_container > [value="lohi"]')).toHaveText('Price (low to high)')
+        await this.page.waitForTimeout(3000)
         
     }
+
+
 }

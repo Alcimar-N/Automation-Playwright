@@ -16,7 +16,7 @@ export class ElementsHomePage {
         this.page = page;
         this.tituloProdutos = page.locator('.header_secondary_container > span')
         this.listaProdutos = page.locator('[class="inventory_item"]')
-        this.redesSocialTwiter = page.locator('ul[class="social"] li:nth-child(1)')
+        this.redesSocialTwiter = page.locator('ul[class="social"] li:nth-child(1)>a')
         this.redesSocialFacebook = page.locator('ul[class="social"] li:nth-child(2)')
         this.redesSocialLinkendin = page.locator('ul[class="social"] li:nth-child(3)')
         this.menuBurger = page.locator('#react-burger-menu-btn')
