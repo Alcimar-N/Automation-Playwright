@@ -8,7 +8,6 @@ export class homePage {
     readonly elementsHome: ElementsHomePage
 
     constructor(page:Page){
-        
         this.page = page
         this.elementsHome = new ElementsHomePage(page)
     }
