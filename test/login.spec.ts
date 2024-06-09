@@ -35,5 +35,5 @@ test.describe('Login', () => {
     test('valida titulo na pagina de login', async() => {
         await loginPage.textoPaginaDeLogin()
     })
-    
+
 })
